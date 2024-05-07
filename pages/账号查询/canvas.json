@@ -1,0 +1,153 @@
+{
+  "unpublishedPage": {
+    "name": "账号查询",
+    "icon": "friends",
+    "slug": "",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 4896,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 690,
+          "containerStyle": "none",
+          "snapRows": 124,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 77,
+          "minHeight": 1292,
+          "dynamicTriggerPathList": [],
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
+          "children": [
+            {
+              "widgetName": "search1",
+              "isCanvas": false,
+              "displayName": "搜索框",
+              "iconSVG": "/static/media/icon.02dadb91d73ad94aa8aaabf7fef790c7.svg",
+              "searchTags": [
+                "search input"
+              ],
+              "topRow": 0,
+              "bottomRow": 8,
+              "onSearch": "{{dy_user_query.run(() => storeValue('keyword',search1.text), () => {})}}",
+              "parentRowSpace": 10,
+              "type": "TARO_SEARCH_WIDGET",
+              "hideCard": false,
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onTextChanged"
+                },
+                {
+                  "key": "onSearch"
+                }
+              ],
+              "readonly": false,
+              "leftColumn": 0,
+              "dynamicBindingPathList": [],
+              "isMobile": true,
+              "placeholder": "输入抖音昵称",
+              "key": "cuad26j6lz",
+              "onTextChanged": "{{storeValue('keyword',search1.text)}}",
+              "isDeprecated": false,
+              "rightColumn": 64,
+              "widgetId": "5m3i31y9he",
+              "inputAlign": "left",
+              "isVisible": true,
+              "version": 1,
+              "parentId": "0",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "showButton": false,
+              "rounded": true
+            },
+            {
+              "widgetName": "list1",
+              "buttonColor": "#03b365",
+              "isCanvas": false,
+              "displayName": "列表",
+              "iconSVG": "/static/media/icon.9925ee17dee37bf1ba7374412563a8a7.svg",
+              "searchTags": [
+                "list"
+              ],
+              "topRow": 8,
+              "bottomRow": 69,
+              "parentRowSpace": 10,
+              "type": "TARO_LIST_WIDGET",
+              "showLoading": true,
+              "hideCard": false,
+              "priceKey": "followers",
+              "parentColumnSpace": 6.84375,
+              "dynamicTriggerPathList": [
+                {
+                  "key": "onItemClicked"
+                }
+              ],
+              "titleColor": "#646566",
+              "leftColumn": 1,
+              "dynamicBindingPathList": [
+                {
+                  "key": "list"
+                }
+              ],
+              "isMobile": true,
+              "contentType": "I_N_D",
+              "key": "btp86hf2lx",
+              "height": "80px",
+              "isDeprecated": false,
+              "rightColumn": 63,
+              "inset": false,
+              "priceColor": "#DD4B34",
+              "widgetId": "2u7kxmmrf7",
+              "descriptionKey": "desc",
+              "descriptionColor": "#999",
+              "isVisible": true,
+              "list": "{{dy_user_query.data.data.data.user_list.map((user)=>{\n\treturn {\n\t\t\"name\":user.user_info.nickname,\n\t\t\"image\":user.user_info.avatar_thumb.url_list[0],\n\t\t\"desc\":user.user_info.signature,\n\t\t\"followers\":user.user_info.follower_count\n\t}\n})}}",
+              "titleKey": "name",
+              "parentId": "0",
+              "urlKey": "image",
+              "renderMode": "CANVAS",
+              "isLoading": false,
+              "onItemClicked": "{{navigateTo('页面1',list1.currentItem, 'SAME_WINDOW')}}",
+              "controlType": "TEXT",
+              "width": "100px"
+            }
+          ]
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "账号查询_dy_user_query",
+              "name": "dy_user_query",
+              "confirmBeforeExecute": false,
+              "pluginType": "API",
+              "jsonPathKeys": [
+                "global.store.keyword"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "账号查询",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "6639cd91f3487a0a17a6f1dd_6639cd91f3487a0a17a6f1df"
+}

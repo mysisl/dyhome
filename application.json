@@ -1,0 +1,38 @@
+{
+  "pages": [
+    {
+      "id": "账号查询",
+      "isDefault": true
+    },
+    {
+      "id": "热门视频",
+      "isDefault": false
+    },
+    {
+      "id": "个人中心",
+      "isDefault": false
+    },
+    {
+      "id": "页面1",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#FFEFDB",
+  "icon": "single-person",
+  "unpublishedAppLayout": {
+    "type": "MOBILE_FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "MOBILE_FLUID"
+  },
+  "unpublishedCustomJSLibs": [],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "isManualUpdate": false,
+  "deleted": false
+}
